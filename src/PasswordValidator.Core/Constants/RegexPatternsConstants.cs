@@ -2,6 +2,6 @@
 {
     public static class RegexPatternsConstants
     {
-        public const string PASSWORD_PATTERN = @"^(?=.*[a-zà-ú])(?=.*[A-ZÀ-Ú])(?=.*\d)(?=.*[-!@#$%^&*()+])(?!.*(.+).*\1)[A-ZÀ-Úa-zà-ú\d-!@#$%^&*()+]{9,}$";
+        public const string PASSWORD_PATTERN = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[-!@#$%^&*()+])(?!.*(.+).*\1)[A-Za-z\d-!@#$%^&*()+]{9,}$";
     }
 }

@@ -2,16 +2,17 @@
 using PasswordValidator.Core.Interfaces;
 using PasswordValidator.Core.Services;
 
-namespace PasswordValidator.UnitTest
+namespace PasswordValidator.UnitTest.Fixture
 {
-    public class UnitTestFixture
+    public static class UnitTestFixture
     {
-        public ServiceProvider ServiceProvider { get; private set; }
+        public static ServiceProvider ServiceProvider { get; private set; }
 
-        public UnitTestFixture()
+        public static void Setup()
         {
             var serviceCollection = new ServiceCollection();
-            serviceCollection.AddTransient<IPasswordService, PasswordService>();
+            serviceCollection.AddScoped<IPasswordService, PasswordService>();
+            serviceCollection.AddScoped(typeof(IPasswordValidator), typeof(Core.Validators.PasswordValidator));
 
             ServiceProvider = serviceCollection.BuildServiceProvider();
         }

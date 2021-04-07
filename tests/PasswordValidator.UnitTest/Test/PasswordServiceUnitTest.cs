@@ -1,16 +1,17 @@
 using Microsoft.Extensions.DependencyInjection;
 using PasswordValidator.Core.Interfaces;
+using PasswordValidator.UnitTest.Fixture;
 using Xunit;
 
-namespace PasswordValidator.UnitTest
+namespace PasswordValidator.UnitTest.Test
 {
     public class PasswordServiceUnitTest
     {
         private readonly IPasswordService _service;
-
-        public PasswordServiceUnitTest(UnitTestFixture fixture)
+        public PasswordServiceUnitTest()
         {
-            _service = fixture.ServiceProvider.GetRequiredService<IPasswordService>();
+            UnitTestFixture.Setup();
+            _service = UnitTestFixture.ServiceProvider.GetService<IPasswordService>();
         }
 
         [Theory]

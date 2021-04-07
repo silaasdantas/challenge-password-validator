@@ -6,9 +6,9 @@ using PasswordValidator.Infra.Extensions;
 
 namespace PasswordValidator.Api
 {
-    public class StartupIntegrationTest
+    public class StartupToIntegrationTest
     {
-        public StartupIntegrationTest(IConfiguration configuration)
+        public StartupToIntegrationTest(IConfiguration configuration)
         {
             Configuration = configuration;
         }

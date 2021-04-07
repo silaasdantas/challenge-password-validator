@@ -1,16 +1,18 @@
 using PasswordValidator.Api;
+using PasswordValidator.IntegrationTest.Fixture;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace PasswordValidator.IntegrationTest
+namespace PasswordValidator.IntegrationTest.Test
 {
     public class ValidatorsControllerTest
     {
-        private readonly IntegrationTestFixture<StartupIntegrationTest> _integrationTest;
+        private readonly IntegrationTestFixture<StartupToIntegrationTest> _integrationTest;
 
-        public ValidatorsControllerTest(IntegrationTestFixture<StartupIntegrationTest> integrationTest)
+        public ValidatorsControllerTest()
         {
-            _integrationTest = integrationTest;
+            _integrationTest = new IntegrationTestFixture<StartupToIntegrationTest>();
+            _integrationTest.Setup();
         }
 
         [Theory]

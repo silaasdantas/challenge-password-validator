@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Text;
 
-namespace PasswordValidator.IntegrationTest
+namespace PasswordValidator.IntegrationTest.Fixture
 {
     public static class ContentHelper
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 
-namespace PasswordValidator.IntegrationTest
+namespace PasswordValidator.IntegrationTest.Fixture
 {
     public class PasswordValidatorFactory<TStartup> : WebApplicationFactory<TStartup> where TStartup : class
     {
