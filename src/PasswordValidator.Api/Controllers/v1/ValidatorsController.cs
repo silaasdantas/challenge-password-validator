@@ -20,15 +20,20 @@ namespace PasswordValidator.Api.Controllers.v1
             _logger = logger;
         }
 
+        /// <summary>
+        /// Valida uma Senha
+        /// </summary>
+        /// <param name="passwordRequest"><see cref="PasswordRequest"/></param>
+        /// <returns><see cref="PasswordResponse"/></returns>
         [HttpPost("password")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult Post([FromBody] PasswordRequest passwordRequest)
         {
             try
             {
                 var result = _passwordValidatorService.IsValid(passwordRequest.Password);
-                return Ok(new { isValid = result });
+                return Ok(PasswordResponse.FromBool(result));
             }
             catch (Exception exception)
             {

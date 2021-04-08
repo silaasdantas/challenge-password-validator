@@ -14,7 +14,7 @@ namespace PasswordValidator.IntegrationTest.Fixture
             var clientOpt = new WebApplicationFactoryClientOptions()
             {
                 HandleCookies = false,
-                BaseAddress = new Uri("http://localhost:53331"),
+                BaseAddress = new Uri("http://localhost:5000"),
                 AllowAutoRedirect = true,
                 MaxAutomaticRedirections = 10
             };
