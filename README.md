@@ -38,10 +38,11 @@ Instalar .Net Core 3.1 SDK
 link: https://dotnet.microsoft.com/download/dotnet/3.1
 
 Utilize o CLI do .NET Core para checar a instalação, digite os comandos abaixo:
+```
 $ dotnet --version
-
+```
 Acessar o diretório na pasta raiz do projeto onde se encontra a sln e execute:
-
+```
 $ dotnet restore
 
 $ dotnet build
@@ -49,10 +50,11 @@ $ dotnet build
 $ cd src\PasswordValidator.Api
 
 $ dotnet run
-
+```
 > **_Nota:_** Para acessar a documentação cole no browser: http://localhost:5000/swagger/index.html
 
 ### :point_right: Testes
 - Ainda com o CMD aberto voltar para pasta raiz do projeto onde se encontra o arquivo sln 
-
+```
 $ dotnet test
+```
